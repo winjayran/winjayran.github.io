@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[limit]]></title>
     <url>%2F2019%2F03%2F20%2Flimit%2F</url>
-    <content type="text"><![CDATA[前置芝士$p(A)=\lim_{n\rightarrow+\infty}\frac{k}{n}$$k$为发生A事件的个数，$n$为样本个数，$p(A)$为发生A事件的概率$\lim{}$是极限 问题：一盘石头剪刀布的胜率我们来分析一下这个问题，无论这一回合你出什么：你总有$\frac{1}{3}$的概率胜利，跳出比赛；你总有$\frac{1}{3}$的概率平局，进入下一回合；你总有$\frac{1}{3}$的概率淘汰，跳出比赛。 我们设所有的总和概率为1 第一回合：$\frac{1}{3}$胜利$\frac{1}{3}$的概率到第二回合：并以$\frac{1}{3}*\frac{1}{3}$胜利………… 所以你有$p(A)=\lim_{n\rightarrow+\infty}\sum_{i=1}^n\frac{1}{3^i}$化简得$p(A)=\frac{1}{2}$ 总结，石头剪刀布是公平游戏 19.3.22：待更新……]]></content>
+    <content type="text"><![CDATA[前置芝士$p(A)=\lim_{n\rightarrow+\infty}\frac{k}{n}$$k$为发生A事件的个数，$n$为样本个数，$p(A)$为发生A事件的概率$\lim{}$是极限 问题：一盘石头剪刀布的胜率我们来分析一下这个问题，无论这一回合你出什么：你总有$\frac{1}{3}$的概率胜利，跳出比赛；你总有$\frac{1}{3}$的概率平局，进入下一回合；你总有$\frac{1}{3}$的概率淘汰，跳出比赛。 我们设所有的总和概率为1 第一回合：$\frac{1}{3}$胜利$\frac{1}{3}$的概率到第二回合：并以$\frac{1}{3}*\frac{1}{3}$胜利………… 所以你有$p(A)=\lim_{n\rightarrow+\infty}\sum_{i=1}^n\frac{1}{3^i}$化简得$p(A)=\frac{1}{2}$ 总结，石头剪刀布是公平游戏 19.3.22：待更新……check:password: 1314520abstract: limitmessage: 123]]></content>
       <tags>
         <tag>数学</tag>
       </tags>
