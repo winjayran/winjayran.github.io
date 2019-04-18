@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Math]]></title>
+    <url>%2F2019%2F04%2F18%2FMath%2F</url>
+    <content type="text"><![CDATA[-1.定义定义若$gcd(a,b)=1$用$a \bot b$表示定义若命题$p$成立，那么$[ p ]=1$，反之等于0$\times$ 为一个数论函数的逐项乘法$ \ast $ 为狄利克雷卷积$$(f \ast g)(i)=\sum_{i|n} f \left (i \right) g \left (\frac{n}{i} \right )$$狄利克雷卷积满足交换律，结合律，分配律以及$$(cf)(i)\ast g(i)=c(f(i) \ast g(i))$$其中c为常数定义单位元$$\epsilon \ast f(i)=f(i)$$我们发现$$\epsilon (i)=[ i=1 ]$$]]></content>
+      <tags>
+        <tag>数学</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[chance]]></title>
     <url>%2F2019%2F03%2F30%2Fchance%2F</url>
     <content type="text"><![CDATA[数学期望&amp;概率dp1 前置芝士上期概率,我们知道了$p(A)=\lim_{n\rightarrow+\infty}\frac{k}{n}$ 2 正题所谓期望，就是在不同时间是，你有不同的收益，总期望就是所求的。$E(x)$表示期望则$E(X)=\sum_{i=1}^{\infty}p(x_{i})wel(x_{i})$ $x_{i}\epsilon X$$p(x_{i})$是$x_{i}$事件发生概率$wel(x_{i})$是$x_{i}$事件发生后的收益 3 外网链接4 例题题目传送门我们这道题使用逆推:$$dp_{i,j}=\frac{dp_{i,j+1}chacs_{i,j,1}+dp_{i+1,j}chacs_{i,j,2}+2}{1-chacs_{i,j,0}}$$注意判断$a_{i,j,0}=1$其中$chacs_{i,j,0}$表示留在原地的概率，$chacs_{i,j,1}$表示向右走的概率,$chacs_{i,j,2}$表示向下走的概率$dp_{1,1}$为所求答案。 123456789101112131415161718192021222324#include&lt;cstdio&gt;#include&lt;cstring&gt;const int maxn=1010;int n,m;double chacs[maxn][maxn][3],dp[maxn][maxn];int main()&#123; while(~scanf("%d%d",&amp;n,&amp;m))&#123; memset(chacs,0.0,sizeof(chacs)); for(int i=1;i&lt;=n;i++) for(int j=1;j&lt;=m;j++) scanf("%lf%lf%lf",&amp;chacs[i][j][0],&amp;chacs[i][j][1],&amp;chacs[i][j][2]); memset(dp,0,sizeof(dp)); for(int i=n;i&gt;=1;i--) for(int j=m;j&gt;=1;j--) &#123; if(i==n&amp;&amp;j==m)continue; else if(chacs[i][j][0]==1.0)continue; else dp[i][j]=(chacs[i][j][1]*dp[i][j+1]+chacs[i][j][2]*dp[i+1][j]+2)/(1.0-chacs[i][j][0]); //printf("%.3f %.3f %.3f\n",chacs[i][j][0],chacs[i][j][1],chacs[i][j][2]); &#125; printf("%.3f\n",dp[1][1]); &#125; return 0;&#125;]]></content>
