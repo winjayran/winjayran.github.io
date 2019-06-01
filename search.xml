@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[Math]]></title>
-    <url>%2F2019%2F04%2F18%2FMath%2F</url>
-    <content type="text"><![CDATA[-1.定义定义若$gcd(a,b)=1$用$a \bot b$表示定义若命题$p$成立，那么$[ p ]=1$，反之等于0$\times$ 为一个数论函数的逐项乘法$ \ast $ 为狄利克雷卷积$$(f \ast g)(i)=\sum_{i|n} f \left (i \right) g \left (\frac{n}{i} \right )$$狄利克雷卷积满足交换律，结合律，分配律以及$$(cf)(i)\ast g(i)=c(f(i) \ast g(i))$$其中c为常数定义单位元$$\epsilon \ast f(i)=f(i)$$我们发现$$\epsilon (i)=[ i=1 ]$$]]></content>
+    <title><![CDATA[数论进阶]]></title>
+    <url>%2F2019%2F04%2F18%2F%E6%95%B0%E8%AE%BA%E8%BF%9B%E9%98%B6%2F</url>
+    <content type="text"><![CDATA[-1.定义定义若$gcd(a,b)=1$用$a \bot b$表示定义若命题$p$成立，那么$[ p ]=1$，反之等于0$\times$ 为一个数论函数的逐项乘法$ \ast $ 为狄利克雷卷积$$(f \ast g)(i)=\sum_{i|n} f \left (i \right) g \left (\frac{n}{i} \right )$$狄利克雷卷积满足交换律，结合律，分配律以及$$(cf)(i)\ast g(i)=c(f(i) \ast g(i))$$其中c为常数定义单位元$$\epsilon \ast f(i)=f(i)$$我们发现$$\epsilon (i)=[ i=1 ]$$………… 线性筛模板：1234567891011121314151617181920212223242526272829303132void cnt()&#123; mu[1]=1; phi[1]=1; // 线性筛 for(ll i=2;i&lt;maxn;i++) &#123; if(check[i]==0) &#123; prime[++prime[0]]=i; check[i]=1; mu[i]=-1; phi[i]=i-1; //性质 质数的phi是i-1 &#125; for(ll j=1;j&lt;=prime[0];j++) &#123; if(i*prime[j]&gt;maxn) break; check[i*prime[j]]=1; if(i%prime[j]==0) // when p=x^2 &#123; mu[i*prime[j]]=0; phi[i*prime[j]]=phi[i]*prime[j]; break; &#125; mu[i*prime[j]]=-mu[i]; phi[i*prime[j]]=phi[i]*(prime[j]-1); &#125; &#125; for(ll i=1;i&lt;maxn;i++)&#123; phi[i]=phi[i-1]+phi[i]; mu[i]=mu[i]+mu[i-1]; &#125;&#125; 0.莫比乌斯反演莫比乌斯反演：1、基本公式：$$ \sum_{d|n} \mu (d) = [n=1]$$2、一般公式：若$f(n)$和$g(n)$是定义在正整数集合上的两个函数若函数$f(n)$满足： $$ f(n)= \sum_{d|n} g(d)= \sum_{d|n} g( \frac{n}{d} )$$则有： $$ g(n)= \sum_{d|n} \mu (d) f(\frac{n}{d})= \sum_{d|n} \mu (\frac{n}{d}) f(d)$$]]></content>
       <tags>
         <tag>数学</tag>
       </tags>
